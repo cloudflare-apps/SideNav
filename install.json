@@ -4,7 +4,7 @@
       "type": "style",
       "src": "head.css"
     }, {
-      "type": "style",
+      "type": "script",
       "src": "head.js"
     }]
   },
