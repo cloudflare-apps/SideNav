@@ -12,14 +12,15 @@ eager-side-nav {
   padding: 3.75em 1.5em 1.5em 1.5em !important;
   overflow: auto !important;
   -webkit-overflow-scrolling: touch;
-  box-shadow: -16px 0 15px 15px rgba(0, 0, 0, .4) !important;
+  box-shadow: -16px 0 15px 15px rgba(0, 0, 0, 0) !important;
   -webkit-transform: translate3d(-100%, 0, 0) !important;
   transform: translate3d(-100%, 0, 0) !important;
-  -webkit-transition: transform .4s ease !important;
-  transition: transform .4s ease !important
+  -webkit-transition: transform .4s ease, box-shadow .4s ease !important;
+  transition: transform .4s ease, box-shadow .4s ease !important
 }
 
 eager-side-nav[eager-side-nav-opened="true"] {
+  box-shadow: -16px 0 15px 15px rgba(0, 0, 0, .4) !important;
   -webkit-transform: translate3d(0, 0, 0) !important;
   transform: translate3d(0, 0, 0) !important
 }
@@ -88,6 +89,7 @@ eager-side-nav-button > * {
   background: #000 !important;
   height: 3px !important;
   width: 25px !important;
+  -webkit-transition: all .4s ease !important;
   transition: all .4s ease !important
 }
 
