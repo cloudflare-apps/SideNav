@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SideNav Test Page</title>
+    <script>
+      INSTALL_OPTIONS = {
+        "labelColor": "#888888",
+        "linkColor": "#000000",
+        "backgroundColor": "#ffffff",
+        "buttonColor": "#000000",
+        "items": [
+          {
+            "itemType": "label",
+            "labelText": "Menu"
+          },
+          {
+            "itemType": "link",
+            "linkText": "Home",
+            "href": "#home",
+            "icon": "home"
+          },
+          {
+            "itemType": "link",
+            "linkText": "Design",
+            "href": "#design",
+            "icon": "stack"
+          },
+          {
+            "itemType": "link",
+            "linkText": "About",
+            "href": "#about",
+            "icon": "user"
+          },
+          {
+            "itemType": "link",
+            "linkText": "Contact",
+            "href": "#contact",
+            "icon": "envelop"
+          },
+          {
+            "itemType": "label",
+            "labelText": "Connect"
+          },
+          {
+            "itemType": "link",
+            "linkText": "Twitter",
+            "href": "http://twitter.com/EagerIO",
+            "icon": "twitter",
+            "targetBlank": true
+          },
+          {
+            "itemType": "link",
+            "linkText": "Facebook",
+            "href": "http://facebook.com/EagerIO",
+            "icon": "facebook",
+            "targetBlank": true
+          }
+        ]
+      };
+
+      // Alternate colors to test
+      // INSTALL_OPTIONS.labelColor = 'rgba(255, 255, 255, .5)'
+      // INSTALL_OPTIONS.linkColor = '#fff'
+      // INSTALL_OPTIONS.backgroundColor = '#579076'
+      // INSTALL_OPTIONS.buttonColor = '#000'
+    </script>
+    <script src="head.js"></script>
+    <link href="head.css" rel="stylesheet">
+    <style>
+      * {
+        margin: 0 !important
+      }
+
+      body {
+        font-family: sans-serif
+      }
+
+      h1 {
+        text-align: center;
+        color: #eee;
+        line-height: 100vh
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SideNav Test Page</h1>
+  </body>
+</html>
