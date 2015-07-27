@@ -9,14 +9,47 @@ eager-side-nav {
   font-family: inherit !important;
   font-size: 1.5em !important;
   max-width: 100% !important;
-  padding: 3.75em 1.5em 1.5em 1.5em !important;
+  padding: 3.75em 2.5em 1.5em 1.5em !important;
   overflow: auto !important;
   -webkit-overflow-scrolling: touch;
   box-shadow: -16px 0 15px 15px rgba(0, 0, 0, 0) !important;
   -webkit-transform: translate3d(-100%, 0, 0) !important;
   transform: translate3d(-100%, 0, 0) !important;
-  -webkit-transition: transform .4s ease, box-shadow .4s ease !important;
-  transition: transform .4s ease, box-shadow .4s ease !important
+  -webkit-transition: -webkit-transform .4s ease !important;
+  transition: transform .4s ease !important
+}
+
+@media (max-width: 768px) {
+  eager-side-nav {
+    font-size: 1.25em !important
+  }
+}
+
+@media (max-width: 480px) {
+  eager-side-nav {
+    font-size: 1.125em !important
+  }
+}
+
+eager-side-nav-cover {
+  display: block !important;
+  position: fixed !important;
+  z-index: 12003 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  -webkit-transition: opacity .4s ease !important;
+  transition: opacity .4s ease !important
+}
+
+eager-side-nav-cover[eager-side-nav-opened="true"] {
+  pointer-events: all !important;
+  opacity: .3 !important
 }
 
 eager-side-nav[eager-side-nav-opened="true"] {
@@ -35,6 +68,7 @@ eager-side-nav::-webkit-scrollbar {
 }
 
 eager-side-nav > * {
+  box-sizing: border-box !important;
   display: block !important;
   white-space: nowrap !important;
   text-overflow: ellipsis !important;
@@ -61,7 +95,7 @@ eager-side-nav-label:first-child {
 eager-side-nav > a {
   cursor: pointer !important;
   border: 0 !important;
-  padding: .25em 1.5em .25em .625em !important;
+  padding: .25em .625em !important;
   text-decoration: none !important
 }
 
@@ -80,6 +114,20 @@ eager-side-nav-button {
   left: 2.25em !important;
   width: 25px !important;
   height: 25px !important
+}
+
+@media (max-width: 768px) {
+  eager-side-nav-button {
+    top: 1.75em !important;
+    left: 1.75em !important
+  }
+}
+
+@media (max-width: 480px) {
+  eager-side-nav-button {
+    top: 1.25em !important;
+    left: 1.5em !important
+  }
 }
 
 eager-side-nav-button > * {

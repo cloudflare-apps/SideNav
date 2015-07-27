@@ -38,8 +38,24 @@
         "format": "color",
         "default": "#000000"
       },
-      "items": {
+      "showCover": {
         "order": 5,
+        "title": "Cover the page when the side nav is open.",
+        "type": "boolean",
+        "default": true
+      },
+      "coverColor": {
+        "order": 6,
+        "showIf": {
+          "showCover": true
+        },
+        "title": "Cover color",
+        "type": "string",
+        "format": "color",
+        "default": "#000000"
+      },
+      "items": {
+        "order": 7,
         "title": "Nav Items",
         "description": "Add as many items to your Nav as you’d like. The two types of items you can add are <strong>Text Labels</strong> and <strong>Links</strong>. Drag and drop to re-order your nav items.",
         "type": "array",
@@ -56,7 +72,7 @@
                 "link"
               ],
               "enumNames": {
-                "label": "Label",
+                "label": "Text Label",
                 "link": "Link"
               },
               "default": "link"
