@@ -125,7 +125,7 @@ eager-side-nav-button {
 
 @media (max-width: 480px) {
   eager-side-nav-button {
-    top: .75em !important;
+    top: 1em !important;
     left: 1em !important
   }
 }
