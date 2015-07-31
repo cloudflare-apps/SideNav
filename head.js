@@ -55,7 +55,7 @@
     if (item.itemType === 'link') {
       itemEl = document.createElement('a');
       itemEl.appendChild(document.createTextNode(item.linkText));
-      itemEl.setAttribute('href', item.href);
+      itemEl.setAttribute('href', item.href || '');
       if (item.targetBlank === true) {
         itemEl.setAttribute('target', '_blank');
       }
