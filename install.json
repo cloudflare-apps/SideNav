@@ -22,6 +22,7 @@
           "left": "Left side of the page",
           "right": "Right side of the page"
         },
+        "format": "radios",
         "default": "left"
       },
       "labelColor": {
