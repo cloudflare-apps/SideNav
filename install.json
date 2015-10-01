@@ -10,42 +10,55 @@
   },
   "options": {
     "properties": {
-      "labelColor": {
+      "position": {
         "order": 1,
+        "title": "Position",
+        "type": "string",
+        "enum": [
+          "left",
+          "right"
+        ],
+        "enumNames": {
+          "left": "Left",
+          "right": "Right"
+        }
+      },
+      "labelColor": {
+        "order": 2,
         "title": "Label Text Color",
         "type": "string",
         "format": "color",
         "default": "#888888"
       },
       "linkColor": {
-        "order": 2,
+        "order": 3,
         "title": "Link Text Color",
         "type": "string",
         "format": "color",
         "default": "#000000"
       },
       "backgroundColor": {
-        "order": 3,
+        "order": 4,
         "title": "Nav Background Color",
         "type": "string",
         "format": "color",
         "default": "#ffffff"
       },
       "buttonColor": {
-        "order": 4,
+        "order": 5,
         "title": "Nav Menu Icon Color",
         "type": "string",
         "format": "color",
         "default": "#000000"
       },
       "showCover": {
-        "order": 5,
+        "order": 6,
         "title": "Cover the page when the side nav is open.",
         "type": "boolean",
         "default": true
       },
       "coverColor": {
-        "order": 6,
+        "order": 7,
         "showIf": {
           "showCover": true
         },
@@ -55,7 +68,7 @@
         "default": "#000000"
       },
       "items": {
-        "order": 7,
+        "order": 8,
         "title": "Nav Items",
         "description": "Add as many items to your Nav as you’d like. The two types of items you can add are <strong>Text Labels</strong> and <strong>Links</strong>. Drag and drop to re-order your nav items.",
         "type": "array",

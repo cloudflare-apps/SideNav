@@ -66,7 +66,7 @@
       itemEl = document.createElement('eager-side-nav-label');
       itemEl.appendChild(document.createTextNode(item.labelText));
     }
-
+    navEl.setAttribute('eager-side-nav-position', options.position);
     navEl.appendChild(itemEl);
   };
 
@@ -78,6 +78,7 @@
   };
 
   addButton = function() {
+    buttonEl.setAttribute('eager-side-nav-position', options.position);
     buttonEl.innerHTML = '' +
       '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
       '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
