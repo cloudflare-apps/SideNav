@@ -14,7 +14,11 @@
   })();
 
   navEl = document.createElement('eager-side-nav');
+  navEl.setAttribute('eager-side-nav-position', options.position);
+
   buttonEl = document.createElement('eager-side-nav-button');
+  buttonEl.setAttribute('eager-side-nav-position', options.position);
+
   coverEl = document.createElement('eager-side-nav-cover');
 
   addStyles = function() {
