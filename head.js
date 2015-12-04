@@ -13,15 +13,25 @@
   })();
 
   var navEl = document.createElement('eager-side-nav');
-  navEl.setAttribute('eager-side-nav-position', options.position);
 
   var buttonEl = document.createElement('eager-side-nav-button');
-  buttonEl.setAttribute('eager-side-nav-position', options.position);
+
+  var setPosition = function() {
+    navEl.setAttribute('eager-side-nav-position', options.position);
+    buttonEl.setAttribute('eager-side-nav-position', options.position);
+  };
+  setPosition();
 
   var coverEl = document.createElement('eager-side-nav-cover');
 
+  var style;
   var addStyles = function() {
-    var style = document.createElement('style');
+    style = document.createElement('style');
+    renderStyles();
+    document.body.appendChild(style);
+  };
+
+  var renderStyles = function() {
     style.innerHTML = '' +
       'eager-side-nav > a {' +
         'color: ' + options.linkColor + ' !important' +
@@ -43,7 +53,6 @@
         'background: ' + options.coverColor + ' !important' +
       '}' : '') +
     '';
-    document.body.appendChild(style);
   };
 
   var addCover = function() {
@@ -73,11 +82,14 @@
     navEl.appendChild(itemEl);
   };
 
+  var addNavEl = function() {
+    document.body.appendChild(navEl);
+  };
+
   var addNavItems = function() {
     for (var i = 0; i < options.items.length; i++) {
       addNavItem(options.items[i]);
     }
-    document.body.appendChild(navEl);
   };
 
   var addButton = function() {
@@ -137,8 +149,19 @@
   document.addEventListener('DOMContentLoaded', function(){
     addStyles();
     addCover();
+    addNavEl();
     addNavItems();
     addButton();
     setupEvents();
   });
+
+  INSTALL_SCOPE = {
+    setOptions: function(opts) {
+      options = opts;
+      renderStyles();
+      navEl.innerHTML = '';
+      addNavItems();
+      setPosition();
+    }
+  };
 })();
