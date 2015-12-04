@@ -3,25 +3,24 @@
     return;
   }
 
-  var options, pointerEventsSupport, navEl, buttonEl, addStyles, addCover, addNavItem, addNavItems, addButton, setupEvents, toggle, open, close;
+  var options = INSTALL_OPTIONS;
 
-  options = INSTALL_OPTIONS;
-
+  var pointerEventsSupport;
   (function(){
     var el = document.createElement('x');
     el.style.cssText = 'pointer-events:auto';
     pointerEventsSupport = el.style.pointerEvents === 'auto';
   })();
 
-  navEl = document.createElement('eager-side-nav');
+  var navEl = document.createElement('eager-side-nav');
   navEl.setAttribute('eager-side-nav-position', options.position);
 
-  buttonEl = document.createElement('eager-side-nav-button');
+  var buttonEl = document.createElement('eager-side-nav-button');
   buttonEl.setAttribute('eager-side-nav-position', options.position);
 
   coverEl = document.createElement('eager-side-nav-cover');
 
-  addStyles = function() {
+  var addStyles = function() {
     var style = document.createElement('style');
     style.innerHTML = '' +
       'eager-side-nav > a {' +
@@ -47,13 +46,13 @@
     document.body.appendChild(style);
   };
 
-  addCover = function() {
+  var addCover = function() {
     if (pointerEventsSupport) {
       document.body.appendChild(coverEl);
     }
   };
 
-  addNavItem = function(item) {
+  var addNavItem = function(item) {
     var itemEl;
 
     if (item.itemType === 'link') {
@@ -74,14 +73,14 @@
     navEl.appendChild(itemEl);
   };
 
-  addNavItems = function() {
+  var addNavItems = function() {
     for (var i = 0; i < options.items.length; i++) {
       addNavItem(options.items[i]);
     }
     document.body.appendChild(navEl);
   };
 
-  addButton = function() {
+  var addButton = function() {
     buttonEl.innerHTML = '' +
       '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
       '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
@@ -90,7 +89,7 @@
     document.body.appendChild(buttonEl);
   };
 
-  setupEvents = function() {
+  var setupEvents = function() {
     buttonEl.addEventListener('click', toggle);
 
     document.body.addEventListener('click', function(event){
@@ -115,7 +114,7 @@
     navEl.addEventListener('touchstart', function(){}, false);
   };
 
-  toggle = function() {
+  var toggle = function() {
     if (buttonEl.getAttribute('eager-side-nav-opened') === 'true') {
       close();
     } else {
@@ -123,13 +122,13 @@
     }
   };
 
-  open = function() {
+  var open = function() {
     coverEl.setAttribute('eager-side-nav-opened', 'true');
     buttonEl.setAttribute('eager-side-nav-opened', 'true');
     navEl.setAttribute('eager-side-nav-opened', 'true');
   };
 
-  close = function() {
+  var close = function() {
     coverEl.setAttribute('eager-side-nav-opened', 'false');
     buttonEl.setAttribute('eager-side-nav-opened', 'false');
     navEl.setAttribute('eager-side-nav-opened', 'false');
