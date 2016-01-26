@@ -42,6 +42,9 @@
       'eager-side-nav {' +
         'background: ' + options.backgroundColor + ' !important' +
       '}' +
+      'eager-side-nav-button:after {' +
+        'content: "' + options.buttonText.replace(/"/g, '\\"') + '"' +
+      '}' +
       'eager-side-nav-button-bar {' +
         'background: ' + options.buttonColor + ' !important' +
       '}' +

@@ -61,6 +61,11 @@
         "format": "color",
         "default": "#000000"
       },
+      "buttonText": {
+        "order": 5,
+        "title": "Nav Menu Icon Text",
+        "type": "string"
+      },
       "showCover": {
         "order": 6,
         "title": "Cover the page when the side nav is open.",
@@ -88,7 +93,7 @@
           "properties": {
             "itemType": {
               "order": 1,
-              "title": "Type of nav item",
+              "title": "Type of Nav Item",
               "type": "string",
               "enum": [
                 "label",

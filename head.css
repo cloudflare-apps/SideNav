@@ -127,9 +127,33 @@ eager-side-nav-button {
   height: 25px !important
 }
 
+eager-side-nav-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2.25em;
+  line-height: 25px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+
+  opacity: 1;
+  transition: 200ms opacity ease;
+}
+
 eager-side-nav-button[eager-side-nav-position="right"] {
   left: auto !important;
   right: 2.25em !important
+}
+
+eager-side-nav-button[eager-side-nav-position="right"]:after {
+  left: auto;
+  right: 2.25em;
+}
+
+eager-side-nav-button[eager-side-nav-opened="true"]:after {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
