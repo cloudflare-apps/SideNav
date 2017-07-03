@@ -12,17 +12,17 @@
     pointerEventsSupport = el.style.pointerEvents === 'auto';
   })();
 
-  var navEl = document.createElement('eager-side-nav');
+  var navEl = document.createElement('cfapps-side-nav');
 
-  var buttonEl = document.createElement('eager-side-nav-button');
+  var buttonEl = document.createElement('cfapps-side-nav-button');
 
   var setPosition = function() {
-    navEl.setAttribute('eager-side-nav-position', options.position);
-    buttonEl.setAttribute('eager-side-nav-position', options.position);
+    navEl.setAttribute('cfapps-side-nav-position', options.position);
+    buttonEl.setAttribute('cfapps-side-nav-position', options.position);
   };
   setPosition();
 
-  var coverEl = document.createElement('eager-side-nav-cover');
+  var coverEl = document.createElement('cfapps-side-nav-cover');
 
   var style;
   var addStyles = function() {
@@ -33,23 +33,23 @@
 
   var renderStyles = function() {
     style.innerHTML = '' +
-      'eager-side-nav > a {' +
+      'cfapps-side-nav > a {' +
         'color: ' + options.linkColor + ' !important' +
       '}' +
-      'eager-side-nav-label {' +
+      'cfapps-side-nav-label {' +
         'color: ' + options.labelColor + ' !important' +
       '}' +
-      'eager-side-nav {' +
+      'cfapps-side-nav {' +
         'background: ' + options.backgroundColor + ' !important' +
       '}' +
-      'eager-side-nav-button-bar {' +
+      'cfapps-side-nav-button-bar {' +
         'background: ' + options.buttonColor + ' !important' +
       '}' +
-      'eager-side-nav-button[eager-side-nav-opened="true"] eager-side-nav-button-bar {' +
+      'cfapps-side-nav-button[cfapps-side-nav-opened="true"] cfapps-side-nav-button-bar {' +
         'background: ' + options.linkColor + ' !important' +
       '}' +
       (options.showCover ? '' +
-      'eager-side-nav-cover {' +
+      'cfapps-side-nav-cover {' +
         'background: ' + options.coverColor + ' !important' +
       '}' : '') +
     '';
@@ -72,10 +72,10 @@
         itemEl.setAttribute('target', '_blank');
       }
       if (item.icon && item.icon !== 'none') {
-        itemEl.setAttribute('eager-side-nav-icon', item.icon);
+        itemEl.setAttribute('cfapps-side-nav-icon', item.icon);
       }
     } else {
-      itemEl = document.createElement('eager-side-nav-label');
+      itemEl = document.createElement('cfapps-side-nav-label');
       itemEl.appendChild(document.createTextNode(item.labelText));
     }
 
@@ -94,9 +94,9 @@
 
   var addButton = function() {
     buttonEl.innerHTML = '' +
-      '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
-      '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
-      '<eager-side-nav-button-bar></eager-side-nav-button-bar>' +
+      '<cfapps-side-nav-button-bar></cfapps-side-nav-button-bar>' +
+      '<cfapps-side-nav-button-bar></cfapps-side-nav-button-bar>' +
+      '<cfapps-side-nav-button-bar></cfapps-side-nav-button-bar>' +
     '';
     document.body.appendChild(buttonEl);
   };
@@ -127,7 +127,7 @@
   };
 
   var toggle = function() {
-    if (buttonEl.getAttribute('eager-side-nav-opened') === 'true') {
+    if (buttonEl.getAttribute('cfapps-side-nav-opened') === 'true') {
       close();
     } else {
       open();
@@ -135,15 +135,15 @@
   };
 
   var open = function() {
-    coverEl.setAttribute('eager-side-nav-opened', 'true');
-    buttonEl.setAttribute('eager-side-nav-opened', 'true');
-    navEl.setAttribute('eager-side-nav-opened', 'true');
+    coverEl.setAttribute('cfapps-side-nav-opened', 'true');
+    buttonEl.setAttribute('cfapps-side-nav-opened', 'true');
+    navEl.setAttribute('cfapps-side-nav-opened', 'true');
   };
 
   var close = function() {
-    coverEl.setAttribute('eager-side-nav-opened', 'false');
-    buttonEl.setAttribute('eager-side-nav-opened', 'false');
-    navEl.setAttribute('eager-side-nav-opened', 'false');
+    coverEl.setAttribute('cfapps-side-nav-opened', 'false');
+    buttonEl.setAttribute('cfapps-side-nav-opened', 'false');
+    navEl.setAttribute('cfapps-side-nav-opened', 'false');
   };
 
   document.addEventListener('DOMContentLoaded', function(){
