@@ -1,12 +1,15 @@
 {
   "resources": {
-    "head": [{
-      "type": "style",
-      "src": "head.css"
-    }, {
-      "type": "script",
-      "src": "head.js"
-    }]
+    "head": [
+      {
+        "type": "style",
+        "src": "./source/app.css"
+      },
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
   },
   "preview": {
     "handlers": [
@@ -126,7 +129,7 @@
                 "items[].itemType": "link"
               },
               "title": "Link URL",
-              "description": "e.g. <em>http://eager.io</em>",
+              "description": "e.g. <em>https://example.com</em>",
               "type": "string"
             },
             "icon": {
@@ -1173,14 +1176,14 @@
           {
             "itemType": "link",
             "linkText": "Twitter",
-            "href": "http://twitter.com/EagerIO",
+            "href": "http://twitter.com/CloudflareApps",
             "icon": "twitter",
             "targetBlank": true
           },
           {
             "itemType": "link",
             "linkText": "Facebook",
-            "href": "http://facebook.com/EagerIO",
+            "href": "http://facebook.com/CloudflareApps",
             "icon": "facebook",
             "targetBlank": true
           }

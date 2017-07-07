@@ -1,0 +1,32 @@
+{
+  "name": "cloudflare-app-side-nav",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "standard --fix ./source/**/*.js || true"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudflareApps/SideNav.git"
+  },
+  "author": "Cloudflare Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CloudflareApps/SideNav/issues"
+  },
+  "homepage": "https://github.com/CloudflareApps/SideNav#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
+  "standard": {
+    "globals": [
+      "INSTALL",
+      "INSTALL_OPTIONS",
+      "INSTALL_SCOPE",
+      "INSTALL_ID"
+    ]
+  }
+}
